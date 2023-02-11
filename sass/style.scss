@@ -1,0 +1,256 @@
+@import "./base/reset";
+@import "./utils/variables";
+@import "./utils/function";
+@import "./utils/mixin";
+@import "./utils/placeholders";
+
+/********************/
+/* GLOBAL CONFIG */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $txt-cl-prim;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/* GLOBAL CONFIG */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/********************/
+/*  COMMON CLASSES */
+
+.flex {
+  display: flex;
+  &_colum {
+    flex-direction: column;
+  }
+}
+
+.justify {
+  &_between {
+    justify-content: space-between;
+  }
+  &_around {
+    justify-content: space-around;
+  }
+  &_center {
+    justify-content: center;
+  }
+  &_end {
+    justify-content: flex-end;
+  }
+}
+
+.align {
+  &_center {
+    align-items: center;
+  }
+  &_start {
+    align-items: flex-start;
+  }
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* PADDING */
+.p_ {
+  &1 {
+    padding: $em-sm;
+  }
+  &2 {
+    padding: $em-md;
+  }
+}
+
+/* MARGIN */
+.my_ {
+  &1 {
+    margin: 1rem 0;
+  }
+  &2 {
+    margin: 2rem 0;
+  }
+}
+
+.mxy_1 {
+  margin: $em-sm;
+}
+
+.m_auto {
+  margin: auto;
+}
+
+.m_txt {
+  margin: 0 0.6rem;
+}
+
+/********************/
+/* HEADER */
+header {
+  width: $el-plain;
+  height: 10vh;
+}
+
+/* CONTAINER */
+.container {
+  margin: auto;
+  width: 95vw;
+}
+
+.container img {
+  display: block;
+  max-width: $el-plain;
+  height: auto;
+}
+
+/* FOOTER */
+footer {
+  width: $el-plain;
+  height: 10vh;
+}
+
+/********************/
+/* PANELS DESK*/
+@for $i from 1 through 6 {
+  #stk-0#{$i} {
+    width: $w-pan-sm;
+    height: $w-pan-sm;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+/* SPEECH BUBBLE */
+@for $i from 1 through 2 {
+  .text-box-0#{$i} {
+    background-color: white;
+    z-index: 100;
+    position: absolute;
+    padding: 0.1rem;
+    color: #333;
+    font-size: $em-sm;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    @if $i == 1 {
+      left: 2rem;
+      right: 20rem;
+      bottom: 16rem;
+    } @else if $i == 2 {
+      left: 19rem;
+      right: 3rem;
+      bottom: 15rem;
+    }
+  }
+}
+
+/********************/
+/* RWD */
+
+/* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px)
+@include for-size(x-sm-dev) {    
+  h1 {
+    position: absolute;
+    margin-top: 3rem;
+    padding: 0.5rem;
+  }
+
+  /* PANELS DESK*/
+  @for $i from 1 through 6 {
+    #stk-0#{$i} {
+      width: $w-pan-md;
+      height: $w-pan-md;
+      margin-bottom: 15rem;
+    }
+  }
+
+  /* SPEECH BUBBLE */
+  @for $i from 1 through 2 {
+    .text-box-0#{$i} {
+      width: 80vw;
+      padding: 0.2rem;
+      position: absolute;
+      color: $txt-cl-prim;
+      font-size: $em-sm;
+      justify-content: center;
+      text-align: center;
+      vertical-align: middle;
+      transform: translate(0, 30%);
+      border-radius: 3px;
+      @if $i == 1 {
+        bottom: -5rem;
+        left: -4rem;
+        background: radial-gradient(#ee646441, #cccee736);
+      } @else if $i == 2 {
+        bottom: -10rem;
+        left: -4rem;
+        background: radial-gradient(#85adf154, #c2dfe523);
+      }
+    }
+  }
+}
+
+/* Small devices : 600px - 878px */
+@include for-size(sm-dev) {    
+    .container div {
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+      }
+
+      .container div p {
+        gap: 1rem;
+      }
+  
+    /* PANELS DESK*/
+    @for $i from 1 through 6 {
+      #stk-0#{$i} {
+        width: $w-pan-md;
+        height: $w-pan-md;
+        margin-bottom: 10rem;
+      }
+    }
+  
+    /* SPEECH BUBBLE */
+    @for $i from 1 through 2 {
+      .text-box-0#{$i} {
+        width: 35vw;
+        max-height: 10vw;
+        position: absolute;
+        color: $txt-cl-prim;
+        font-size: $em-sm;
+        justify-content: center;
+        text-align: center;
+        transform: translate(0, 30%);
+        @if $i == 1 {
+          bottom: -5rem;
+          left: -4rem;
+        } @else if $i == 2 {
+          bottom: -5rem;
+          left: 16rem;
+        }
+      }
+    }
+  }

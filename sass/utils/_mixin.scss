@@ -1,0 +1,19 @@
+@mixin for-size($size) {
+  @if $size == x-sm-dev {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $size == sm-dev {
+    @media only screen and (min-width: 600px) and (max-width: 878px) {
+      @content;
+    }
+  } @else if $size == md-dev {
+    @media only screen and (min-width: 878px) and (max-width: 929px) {
+      @content;
+    }
+    // } @else if $size == desktop-up {
+    //   @media (min-width: 1200px) { @content; }
+    // } @else if $size == big-desktop-up {
+    //   @media (min-width: 1800px) { @content; }
+  }
+}

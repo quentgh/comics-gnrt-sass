@@ -1,1 +1,340 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* BKG */
+/* TXT */
+/* ELEMENT SIZE*/
+/* PANEL WIDTH */
+/********************/
+/* GLOBAL CONFIG */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/* GLOBAL CONFIG */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/********************/
+/*  COMMON CLASSES */
+.flex {
+  display: flex;
+}
+.flex_colum {
+  flex-direction: column;
+}
+
+.justify_between {
+  justify-content: space-between;
+}
+.justify_around {
+  justify-content: space-around;
+}
+.justify_center {
+  justify-content: center;
+}
+.justify_end {
+  justify-content: flex-end;
+}
+
+.align_center {
+  align-items: center;
+}
+.align_start {
+  align-items: flex-start;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* PADDING */
+.p_1 {
+  padding: 1rem;
+}
+.p_2 {
+  padding: 2rem;
+}
+
+/* MARGIN */
+.my_1 {
+  margin: 1rem 0;
+}
+.my_2 {
+  margin: 2rem 0;
+}
+
+.mxy_1 {
+  margin: 1rem;
+}
+
+.m_auto {
+  margin: auto;
+}
+
+.m_txt {
+  margin: 0 0.6rem;
+}
+
+/********************/
+/* HEADER */
+header {
+  width: 100%;
+  height: 10vh;
+}
+
+/* CONTAINER */
+.container {
+  margin: auto;
+  width: 95vw;
+}
+
+.container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 10vh;
+}
+
+/********************/
+/* PANELS DESK*/
+#stk-01 {
+  width: 35vw;
+  height: 35vw;
+  position: relative;
+  display: inline-block;
+}
+
+#stk-02 {
+  width: 35vw;
+  height: 35vw;
+  position: relative;
+  display: inline-block;
+}
+
+#stk-03 {
+  width: 35vw;
+  height: 35vw;
+  position: relative;
+  display: inline-block;
+}
+
+#stk-04 {
+  width: 35vw;
+  height: 35vw;
+  position: relative;
+  display: inline-block;
+}
+
+#stk-05 {
+  width: 35vw;
+  height: 35vw;
+  position: relative;
+  display: inline-block;
+}
+
+#stk-06 {
+  width: 35vw;
+  height: 35vw;
+  position: relative;
+  display: inline-block;
+}
+
+/* SPEECH BUBBLE */
+.text-box-01 {
+  background-color: white;
+  z-index: 100;
+  position: absolute;
+  padding: 0.1rem;
+  color: #333;
+  font-size: 1rem;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  left: 2rem;
+  right: 20rem;
+  bottom: 16rem;
+}
+
+.text-box-02 {
+  background-color: white;
+  z-index: 100;
+  position: absolute;
+  padding: 0.1rem;
+  color: #333;
+  font-size: 1rem;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  left: 19rem;
+  right: 3rem;
+  bottom: 15rem;
+}
+
+/********************/
+/* RWD */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    position: absolute;
+    margin-top: 3rem;
+    padding: 0.5rem;
+  }
+  /* PANELS DESK*/
+  #stk-01 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 15rem;
+  }
+  #stk-02 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 15rem;
+  }
+  #stk-03 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 15rem;
+  }
+  #stk-04 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 15rem;
+  }
+  #stk-05 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 15rem;
+  }
+  #stk-06 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 15rem;
+  }
+  /* SPEECH BUBBLE */
+  .text-box-01 {
+    width: 80vw;
+    padding: 0.2rem;
+    position: absolute;
+    color: #333;
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    transform: translate(0, 30%);
+    border-radius: 3px;
+    bottom: -5rem;
+    left: -4rem;
+    background: radial-gradient(rgba(238, 100, 100, 0.2549019608), rgba(204, 206, 231, 0.2117647059));
+  }
+  .text-box-02 {
+    width: 80vw;
+    padding: 0.2rem;
+    position: absolute;
+    color: #333;
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    transform: translate(0, 30%);
+    border-radius: 3px;
+    bottom: -10rem;
+    left: -4rem;
+    background: radial-gradient(rgba(133, 173, 241, 0.3294117647), rgba(194, 223, 229, 0.137254902));
+  }
+}
+/* Small devices : 600px - 878px */
+@media only screen and (min-width: 600px) and (max-width: 878px) {
+  .container div {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .container div p {
+    gap: 1rem;
+  }
+  /* PANELS DESK*/
+  #stk-01 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 10rem;
+  }
+  #stk-02 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 10rem;
+  }
+  #stk-03 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 10rem;
+  }
+  #stk-04 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 10rem;
+  }
+  #stk-05 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 10rem;
+  }
+  #stk-06 {
+    width: 55vw;
+    height: 55vw;
+    margin-bottom: 10rem;
+  }
+  /* SPEECH BUBBLE */
+  .text-box-01 {
+    width: 35vw;
+    max-height: 10vw;
+    position: absolute;
+    color: #333;
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    transform: translate(0, 30%);
+    bottom: -5rem;
+    left: -4rem;
+  }
+  .text-box-02 {
+    width: 35vw;
+    max-height: 10vw;
+    position: absolute;
+    color: #333;
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    transform: translate(0, 30%);
+    bottom: -5rem;
+    left: 16rem;
+  }
+}/*# sourceMappingURL=style.css.map */
