@@ -4,16 +4,32 @@
       @content;
     }
   } @else if $size == sm-dev {
-    @media only screen and (min-width: 600px) and (max-width: 878px) {
+    @media only screen and (min-width: 600px) and (max-width: 858px) {
       @content;
     }
   } @else if $size == md-dev {
-    @media only screen and (min-width: 878px) and (max-width: 929px) {
+    @media only screen and (min-width: 858px) and (max-width: 1099px) {
       @content;
     }
-    // } @else if $size == desktop-up {
-    //   @media (min-width: 1200px) { @content; }
-    // } @else if $size == big-desktop-up {
-    //   @media (min-width: 1800px) { @content; }
+  } @else if $size == md-dev-pan {
+    @media only screen and (min-width: 1000px) and (max-width: 1401px) {
+      @content;
+    }
+  } @else if $size == l-dev {
+    @media only screen and (min-width: 1099px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $size == l-l-dev {
+    @media only screen and (min-width: 1199px) and (max-width: 1401px) {
+      @content;
+    }
+  } @else if $size == xl-dev {
+    @media only screen and (min-width: 1700px) {
+      @content;
+    }
+  } @else if $size == xxl-dev {
+    @media only screen and (min-width: 2400px) {
+      @content;
+    }
   }
 }
