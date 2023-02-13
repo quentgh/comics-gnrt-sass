@@ -145,7 +145,7 @@ footer {
 @for $i from 1 through 2 {
   .text-box-0#{$i} {
     background-color: white;
-    z-index: 100;
+    // z-index: 100;
     position: absolute;
     padding: 0.1rem;
     color: #333;
@@ -170,7 +170,7 @@ footer {
 
 /* Extra small devices (phones, 600px and down) */
 // @media only screen and (max-width: 600px)
-@include for-size(x-sm-dev) {    
+@include for-size(x-sm-dev) {
   h1 {
     position: absolute;
     margin-top: 3rem;
@@ -213,44 +213,225 @@ footer {
 }
 
 /* Small devices : 600px - 878px */
-@include for-size(sm-dev) {    
-    .container div {
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-      }
+@include for-size(sm-dev) {
+  .container div {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
 
-      .container div p {
-        gap: 1rem;
-      }
-  
-    /* PANELS DESK*/
-    @for $i from 1 through 6 {
-      #stk-0#{$i} {
-        width: $w-pan-md;
-        height: $w-pan-md;
-        margin-bottom: 10rem;
-      }
+  .container div p {
+    gap: 1rem;
+  }
+
+  /* PANELS DESK*/
+  @for $i from 1 through 6 {
+    #stk-0#{$i} {
+      width: $w-pan-md;
+      height: $w-pan-md;
+      margin-bottom: 10rem;
     }
-  
-    /* SPEECH BUBBLE */
-    @for $i from 1 through 2 {
-      .text-box-0#{$i} {
-        width: 35vw;
-        max-height: 10vw;
-        position: absolute;
-        color: $txt-cl-prim;
-        font-size: $em-sm;
-        justify-content: center;
-        text-align: center;
-        transform: translate(0, 30%);
-        @if $i == 1 {
-          bottom: -5rem;
-          left: -4rem;
-        } @else if $i == 2 {
-          bottom: -5rem;
-          left: 16rem;
-        }
+  }
+
+  /* SPEECH BUBBLE */
+  @for $i from 1 through 2 {
+    .text-box-0#{$i} {
+      width: 35vw;
+      max-height: 10vw;
+      position: absolute;
+      color: $txt-cl-prim;
+      font-size: $em-sm;
+      justify-content: center;
+      text-align: center;
+      transform: translate(0, 30%);
+      @if $i == 1 {
+        bottom: -5rem;
+        left: -5rem;
+      } @else if $i == 2 {
+        bottom: -5rem;
+        left: 14rem;
       }
     }
   }
+}
+
+/* Medium devices : 878px - 929px // 1099px */
+@include for-size(md-dev) {
+  /* PANELS DESK*/
+  @for $i from 1 through 6 {
+    #stk-0#{$i} {
+      width: $w-pan-md-l;
+      height: $w-pan-md-l;
+      position: relative;
+      display: inline-block;
+    }
+  }
+
+  /* SPEECH BUBBLE */
+  @for $i from 1 through 2 {
+    .text-box-0#{$i} {
+      z-index: 100;
+      position: absolute;
+      color: $txt-cl-prim;
+      font-size: $em-sm;
+      justify-content: center;
+      text-align: center;
+      vertical-align: middle;
+      @if $i == 1 {
+        left: 2rem;
+        right: 21rem;
+        bottom: 18rem;
+      } @else if $i == 2 {
+        left: 19rem;
+        right: 2rem;
+        bottom: 16rem;
+      }
+    }
+  }
+}
+
+/* Medium devices - Pan  : 929px - 1099px // 878 - 929*/
+@include for-size(md-dev-pan) {
+  /* PANELS DESK*/
+  @for $i from 1 through 6 {
+    #stk-0#{$i} {
+      width: $w-pan-md;
+      height: $w-pan-md;
+      position: relative;
+      display: inline-block;
+    }
+  }
+}
+
+/* Large devices : 1099px - 1199px */
+@include for-size(l-dev) {
+  /* SPEECH BUBBLE */
+  @for $i from 1 through 2 {
+    .text-box-0#{$i} {
+      z-index: 100;
+      position: absolute;
+      color: $txt-cl-prim;
+      font-size: $em-sm;
+      justify-content: center;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0 1rem;
+      @if $i == 1 {
+        left: 2rem;
+        right: 24rem;
+        bottom: 20rem;
+      } @else if $i == 2 {
+        left: 22rem;
+        right: 2rem;
+        bottom: 18rem;
+      }
+    }
+  }
+}
+
+/* Large devices : 1099px - 1199px */
+@include for-size(l-l-dev) {
+  /* SPEECH BUBBLE */
+  @for $i from 1 through 2 {
+    .text-box-0#{$i} {
+      z-index: 100;
+      position: absolute;
+      color: $txt-cl-prim;
+      font-size: $em-sm;
+      justify-content: center;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0 1.2rem;
+      @if $i == 1 {
+        left: 2rem;
+        right: 28rem;
+        bottom: 20rem;
+      } @else if $i == 2 {
+        left: 28rem;
+        right: 2rem;
+        bottom: 18rem;
+      }
+    }
+  }
+}
+
+/* Large devices : more 1700px */
+@include for-size(xl-dev) {
+  /* PANELS DESK*/
+  @for $i from 1 through 6 {
+    #stk-0#{$i} {
+      width: $w-pan-sm;
+      height: $w-pan-sm;
+      position: relative;
+      display: inline-block;
+    }
+  }
+
+  /* SPEECH BUBBLE */
+  @for $i from 1 through 2 {
+    .text-box-0#{$i} {
+      z-index: 100;
+      padding: 0.1rem;
+      background-color: white;
+      position: absolute;
+      color: $txt-cl-prim;
+      font-size: $em-sm;
+      justify-content: center;
+      text-align: center;
+      vertical-align: middle;
+      @if $i == 1 {
+        left: 2rem;
+        right: 21rem;
+        bottom: 24rem;
+      } @else if $i == 2 {
+        left: 21rem;
+        right: 3rem;
+        bottom: 22rem;
+      }
+    }
+  }
+}
+
+/* XXLarge devices : more 2400px */
+@include for-size(xxl-dev) {
+  .container div {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .container div p {
+    gap: 1rem;
+  }
+
+  /* PANELS DESK*/
+  @for $i from 1 through 6 {
+    #stk-0#{$i} {
+      width: $w-pan-md;
+      height: $w-pan-md;
+      margin-bottom: 10rem;
+    }
+  }
+
+  /* SPEECH BUBBLE */
+  @for $i from 1 through 2 {
+    .text-box-0#{$i} {
+      z-index: 100;
+      width: $w-pan-sm;
+      max-height: 10vw;
+      position: absolute;
+      color: $txt-cl-prim;
+      font-size: $em-sm;
+      justify-content: center;
+      text-align: center;
+      transform: translate(0, 30%);
+      @if $i == 1 {
+        bottom: -5rem;
+        left: 10rem;
+      } @else if $i == 2 {
+        bottom: -7rem;
+        right: 2rem;
+      }
+    }
+  }
+}
