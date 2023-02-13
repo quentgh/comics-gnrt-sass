@@ -1,11 +1,13 @@
-# Comics-gnrt-sass
+# comics-gnrt-sass
 
 A comics generator - small project with HTML / CSS / JS and SASS preprocessor.
 
 Edit the style.scss file to modify style.
+
 Edit the Javascript file to add your drawing and dialogue.
 
-Currently, you have a limitation of 6 panels within a single page.
+Currently, you have a limitation of 6 panels max within a single page.
+
 If you want more panels, you have to edit HTML and SCSS files too.
 
 
