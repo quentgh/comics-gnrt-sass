@@ -157,7 +157,6 @@ footer {
       left: 2rem;
       right: 20rem;
       bottom: 16rem;
-      margin-bottom: 1rem;
     } @else if $i == 2 {
       left: 19rem;
       right: 3rem;
@@ -203,6 +202,7 @@ footer {
       @if $i == 1 {
         bottom: -5rem;
         left: -4rem;
+        margin-bottom: 1rem;
         background: radial-gradient(#ee646441, #cccee736);
       } @else if $i == 2 {
         bottom: -10rem;
