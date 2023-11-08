@@ -10,6 +10,8 @@ Currently, you have a limitation of 6 panels max within a single page.
 
 If you want more panels, you have to edit HTML and SCSS files too.
 
+Here we have the result (github-pages) : [comics-gnrt](https://quentgh.github.io/comics-gnrt-sass/)
+
 
 ## Prerequisites
 SASS preprocessor - scss syntax was used on this project.
